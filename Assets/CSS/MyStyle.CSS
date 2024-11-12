@@ -34,7 +34,7 @@ h2{ text-decoration: underline;
 
 .font-roboto{
     font-family: "Noto Sans", sans-serif;
-    text-indent: 10px;
+    text-indent: 10px !important;
     text-align: center;
     
 }
@@ -47,3 +47,23 @@ a:hover{
     color: yellow
 }
 
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+div{
+    padding: 25px 50px 75px 100px;
+}
+
+@media (min-width:767px){
+    body{
+        background-color: lightblue;
+    }
+
+}

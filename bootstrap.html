@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example with Dropdown and Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .font-roboto {
+            font-family: "Noto Sans", sans-serif;
+            text-indent: 10px !important;
+            text-align: center;
+        }
+        a:link {
+            color: purple;
+        }
+        a:hover {
+            color: yellow;
+        }
+        .rounded-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand font-roboto" href="#">My Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="#">Web Development</a>
+                        <a class="dropdown-item" href="#">Design</a>
+                        <a class="dropdown-item" href="#">Marketing</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container text-center my-5">
+        <h1 class="font-roboto">Welcome to My Website</h1>
+        <p>This is an example of a simple webpage using Bootstrap with custom CSS.</p>
+        <a href="#" class="rounded-btn">Get Started</a>
+    </div>
+
+    <!-- Card Section -->
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-header">
+                Featured Service
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">We offer high-quality web development services to help your business grow online. Our experienced team ensures a seamless user experience for your audience.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p class="font-roboto">&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
