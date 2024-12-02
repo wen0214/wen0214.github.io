@@ -122,14 +122,13 @@ section {
     width: 100%;
     font-family: "Lora", serif;
     background-color: rgb(243, 245, 229);
-    display: column;
     align-items: center;
     gap: 7em;
     padding: 30px 12% 30px;
 }
 
 .about-content{
-    max-width: 800px;
+    max-width: 100%;
     color: rgb(63, 66, 56);
     margin-bottom: 50px;
 }
@@ -146,21 +145,38 @@ section {
     color: rgb(63, 66, 56);
 }
 
+.language-content {
+    display: flex; /* 讓列表水平排列 */
+    gap: 20px; /* 設定列表項目間的間距 */
+    list-style-type: disc; /* 使用預設的列表符號 */
+    padding: 0; /* 移除內邊距 */
+    margin: 25px 0 30px; /* 移除外邊距 */
 
-.interests-containter {
-    max-width: 800px;
+}
+
+.language-content li{
+    font-size: 18px;
     color: rgb(63, 66, 56);
-    margin-bottom: 30px;
-    flex: 1;
+    margin: 0px 0;
+  }
+
+
+.interests-container, .language-container{
+  flex: 1; /* Ensure equal space for both sections */
+  min-width: 0px; /* Prevent sections from becoming too narrow */
 }
-  
-  
+
+
+
 .interests-content {
-    display: flex;
-    gap: 50px; /* Space between items */
-    margin: 25px 0 30px
-}
+  margin: 0; /* Reset any margins */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 15px; /* Add consistent space between items */
   
+}
+
+
 .interest-item {
     font-size: 18px;
     color: rgb(63, 66, 56);
@@ -175,7 +191,6 @@ section {
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 100%;
     height: 2px;
     background-color: rgb(142, 202, 159);
     opacity: 0;
@@ -192,29 +207,6 @@ section {
     transform: scaleX(1);
     opacity: 1;
 }
-  
-/* Align Interests and Language Side by Side */
-.about-row {
-   display: flex;
-   justify-content: space-between; /* Push sections to opposite sides */
-   gap: 50px; /* Add space between sections */
-   align-items: flex-start; /* Align top edges */
-}
-
-/* Language Styling */
-.language-container {
-   flex: 1;
-   text-align: left; /* Align language section text to the right */
-}
-
-.language-content {
-   display: inline-flex;
-   gap: 15px; /* Add space between languages */
-   font-size: 18px;
-   color: rgb(63, 66, 56); /* Matches your site's text color */
-}
-
-
 
 .education-schoolclub-container {
     display: flex; /* 使用 Flexbox 排列 */
@@ -223,29 +215,22 @@ section {
     gap: 0px; /* 設定區塊之間的間距 */
     justify-content: space-between; /* 讓兩個區塊之間分開排列 */
     padding: 30px 12% 30px;
-    font-family: "Lora", serif;
-   
 }
   
-.education-content {  
+.education-content,
+.school-club-content {  
     min-width: 0; /* 防止內容超出區塊 */
     width: 100%;
 }
-.school-club-content {
-    min-width: 0; /* 防止內容超出區塊 */
-    width: 100%;
-}
+
   
-.education-content h2  {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: rgb(63, 66, 56);
-}
+.education-content h2,
 .school-club-content h2 {
     font-size: 24px;
     margin-bottom: 25px;
     color: rgb(63, 66, 56);
 }
+
   
 .timeline-item {
     display: flex;
@@ -355,9 +340,6 @@ section {
     color: rgb(63, 66, 56);
     padding-inline-start: 30px;
 }
-
-
-
 
 
 
