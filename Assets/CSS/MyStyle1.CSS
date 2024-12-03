@@ -1,7 +1,11 @@
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Ensures that padding and border are included in an element's total width and height */
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
 
 html {
    scroll-behavior: smooth; /* Enables smooth scrolling */
@@ -13,7 +17,8 @@ section {
 
 
 /* Header */
-.header{ background-color: rgb(213, 223, 180);
+.header{ 
+    background-color: rgb(213, 223, 180);
     position: fixed;
     top: 0;
     left: 0;
@@ -24,8 +29,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-   
+    z-index: 1000; /* High z-index ensures the header stays above other content. */
 
 }
 
@@ -115,7 +119,7 @@ section {
 
 .img-box img{
     border-radius: 30%;
-    width: 500px;
+    width: 50vw;
 }
 
 .about-container{
@@ -124,7 +128,7 @@ section {
     background-color: rgb(243, 245, 229);
     align-items: center;
     gap: 7em;
-    padding: 30px 12% 30px;
+    padding: 50px 12% 30px;
 }
 
 .about-content{
@@ -146,11 +150,11 @@ section {
 }
 
 .language-content {
-    display: flex; /* 讓列表水平排列 */
-    gap: 20px; /* 設定列表項目間的間距 */
-    list-style-type: disc; /* 使用預設的列表符號 */
-    padding: 0; /* 移除內邊距 */
-    margin: 25px 0 30px; /* 移除外邊距 */
+    display: flex; 
+    gap: 20px;
+    list-style-type: disc; 
+    padding: 0;
+    margin: 25px 0 30px; 
 
 }
 
@@ -162,17 +166,17 @@ section {
 
 
 .interests-container, .language-container{
-  flex: 1; /* Ensure equal space for both sections */
-  min-width: 0px; /* Prevent sections from becoming too narrow */
+    flex: 1; /* Ensure equal space for both sections */
+    min-width: 0px; /* Prevent sections from becoming too narrow */
 }
 
 
 
 .interests-content {
-  margin: 0; /* Reset any margins */
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 15px; /* Add consistent space between items */
+    margin: 0; /* Reset any margins */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Add consistent space between items */
   
 }
 
@@ -209,17 +213,17 @@ section {
 }
 
 .education-schoolclub-container {
-    display: flex; /* 使用 Flexbox 排列 */
-    flex-wrap: nowrap; /* 確保橫向不換行 */
+    display: flex; 
+    flex-wrap: nowrap; 
     background-color: rgb(243, 245, 229);
-    gap: 0px; /* 設定區塊之間的間距 */
-    justify-content: space-between; /* 讓兩個區塊之間分開排列 */
-    padding: 30px 12% 30px;
+    gap: 0px; 
+    justify-content: space-between; 
+    padding: 50px 12% 30px;
 }
   
 .education-content,
 .school-club-content {  
-    min-width: 0; /* 防止內容超出區塊 */
+    min-width: 0; 
     width: 100%;
 }
 
@@ -270,7 +274,7 @@ section {
 }
 
 .date {
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(107, 112, 92);
     
     text-align: right;
@@ -286,10 +290,14 @@ section {
     font-family: "Lora", serif;
 }
 
+.experience-container h2{
+    margin-bottom: 25px;
+}
+
 .experience-card {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Adds maximum horizontal space between the elements */
     background-color: rgb(255, 255, 255);
     gap: 24px;
     padding: 20px;
@@ -304,7 +312,7 @@ section {
     height: 80px;  /* Fixed height */
     display: flex;  /* Added for better image centering */
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .company_logo img {
@@ -348,44 +356,41 @@ section {
     width: 100%;
     padding: 50px 12%;
     font-family: "Lora", serif;
-    background-color: rgb(243, 245, 229); /* Matches your site's background */
+    background-color: rgb(243, 245, 229); 
 }
 
-.skills-container h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: rgb(63, 66, 56); /* Dark green-gray */
-}
+
 
 .skills-container p {
     font-size: 18px;
-    margin-bottom: 25px;
-    color: rgb(107, 112, 92); /* Muted gray-green */
+    margin: 15px 0 25px;
+    color: rgb(107, 112, 92); 
 }
 
+/* Arranges skill items in a two-column grid for clarity and organization */
 .skills-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, where each column takes up an equal share of the available space */
     gap: 50px;
 }
 
 .skill {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .skill span {
-    flex-basis: 25%;
+    flex-basis: 20%; /* take up 25% of the container's size */
     font-size: 18px;
     font-weight: bold;
-    color: rgb(63, 66, 56); /* Text color */
+    color: rgb(63, 66, 56); 
 }
 
 .skill-bar {
     flex-grow: 1;
     height: 8px;
-    background-color: rgb(220, 220, 220); /* Light gray */
+    background-color: rgb(220, 220, 220);
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -393,14 +398,14 @@ section {
 
 .skill-bar .progress {
     height: 100%;
-    background-color: rgb(142, 202, 159); /* Soft green that matches your background */
+    background-color: rgba(79, 147, 71, 0.746);
     border-radius: 4px;
     transition: width 0.5s ease-in-out;
 }
 
 .percentage {
     flex-basis: 10%;
-    text-align: right;
+    text-align: left;
     font-size: 16px;
     font-weight: bold;
     color: rgb(63, 66, 56); /* Text color */
@@ -472,14 +477,12 @@ section {
 .portfolio-container {
     width: 100%;
     padding: 50px 12%;
-    background-color: rgb(243, 245, 229); /* Matches your site’s style */
+    background-color: rgb(243, 245, 229); 
     font-family: "Lora", serif;
 }
   
 .portfolio-container h2 {
-    font-size: 24px;
     margin-bottom: 25px;
-    color: rgb(63, 66, 56);
 }
   
 .portfolio-grid {
@@ -534,7 +537,7 @@ section {
 }
   
 .portfolio-content .date {
-    font-size: 14px;
+    font-size: 16px;
     color: rgb(42, 78, 38, 0.561);
     margin-bottom: 15px;
     display: block;
