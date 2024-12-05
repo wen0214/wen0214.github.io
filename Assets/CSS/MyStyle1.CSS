@@ -33,6 +33,42 @@ section {
 
 }
 
+.navbar {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px;
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgb(243, 245, 229); /* Background for the dropdown */
+        width: 100%;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button on smaller screens */
+    }
+}
+
 
 .header a{
     color: #333; 
@@ -61,6 +97,7 @@ section {
     color: rgb(63, 66, 56);
     font-weight: bold;
     margin: 0 10px;
+    text-align: center;
     transition: 0.3 ease;
 }
 
@@ -72,16 +109,17 @@ section {
 }
 
 .contact-link{
-    padding: 8px 12px;
-    background-color: rgb(254, 250, 224);
+    display: inline-block;
+    padding: 10px 15px; /* Add appropriate padding */
+    background-color: rgb(254, 250, 224); /* Maintain the button's color */
     border: 2px solid transparent;
     border-radius: 8px;
-    margin-left: auto; 
-    color: rgb(63, 66, 56);
-    font-size: 20px;
-    font-weight: 6;
+    color: rgb(63, 66, 56); /* Consistent font color */
+    font-size: 18px;
+    text-align: center; /* Center align text */
     font-weight: bold;
-    transition: 0.3s ease;
+    margin: 10px 0; /* Add spacing between the links */
+    transition: 0.3s ease; /* Smooth hover effect */
 }
 
 .home-container{
@@ -119,7 +157,11 @@ section {
 
 .img-box img{
     border-radius: 30%;
-    width: 50vw;
+    width: 100%; /* Change to a percentage or fixed value */
+    max-width: 900px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it doesn't overflow */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
 .about-container{

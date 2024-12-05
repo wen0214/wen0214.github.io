@@ -26,6 +26,9 @@
   <header class="header">
     <!-- Header content -->
     <a href="#" class = "logo" >Wen</a>
+    <button class="hamburger" aria-label="Toggle menu">
+      ☰
+    </button>
     <nav class="navbar">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -34,6 +37,8 @@
       <a href="#contact" class="contact-link">Contact Me</a>
     </nav>  
   </header>
+
+  
 
   <!-- Hero Section -->
   <section class="home-container">
@@ -377,10 +382,15 @@
       // Remove the temporary input element
       document.body.removeChild(tempInput);
   
-    
     });
   </script>
-  
+
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+    });
+  </script>
 
 
 </body>
