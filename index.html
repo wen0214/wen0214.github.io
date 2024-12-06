@@ -1,7 +1,7 @@
 <!-- 
   Main Document Structure
   - Header: Navigation and branding
-  - Sections: Organized by content type
+  - Sections: Home, About, Experience, Skills, Portfolio, Contact
   - Each section has consistent class naming convention
 -->
 
@@ -22,10 +22,13 @@
   </head>
 
   <body>
+  <!-- Header: Contains navigation and branding 
+       Using semantic <header> tag for better accessibility -->  
   <!-- Navigation Header -->
   <header class="header">
     <!-- Header content -->
     <a href="#" class = "logo" >Wen</a>
+    <!-- Mobile Navigation Toggle -->
     <button class="hamburger" aria-label="Toggle menu">
       ☰
     </button>
@@ -40,7 +43,8 @@
 
   
 
-  <!-- Hero Section -->
+  <!-- Hero Section: Introduction and profile image
+       Using 'home-container' for main layout structure -->
   <section class="home-container">
     <!-- Home content -->
     <div class="home-content">
@@ -50,13 +54,16 @@
         With 4 years of data-oriented marketing  experience, I specialize in transforming marketing 
         intelligence into intuitive design solutions. </p>
     </div> 
-     
+
+    <!-- Profile Image Container --> 
     <div class="img-box">
         <img src="Assets/IMG/Huei-Wen Cheng_Square.JPG" alt="Wen's profile picture">
     </div>
   </section>
 
-  <!-- About Me Section -->
+
+
+  <!-- About Section: Personal information: language, interests, education, and school club -->
   <section id="about" class="about-container">
     <!-- About content -->
     <div class="about-content">
@@ -100,10 +107,9 @@
             </div>
           </div>
         </div>
-     
     </div>
 
-     <!-- Interests content -->
+    <!-- Interests content -->
     <div class="interests-container">
       <h2 class="heading">Interests</h2>
       <div class="interest-box">
@@ -114,7 +120,7 @@
           <h3>Photography</h3>
           <p>
             I love capturing moments that tell a story. Check out my 
-            <a href="https://flic.kr/ps/45rZq1" target="_blank">photo collection</a> for a glimpse into my world.
+            <a href="https://flic.kr/ps/45rZq1" target="_blank">photo collection</a>.
           </p>
         </div>
       </div>
@@ -184,15 +190,15 @@
             <p>Led cultural exchange programs to foster international collaboration on campus.</p>
           </div>
         </div>
-    </div>
-  
-      
-    
     </div>      
    </section>  
 
 
-  <!-- Experience Section -->
+  <!-- Experience Section
+       Purpose: Display work history in chronological order
+       Structure: 
+       - Individual experience cards for each role
+       - Consistent layout with company logo, details, and dates -->
   <section id="experience" class="experience-container">
     <!-- Experience content -->
     <h2 class="heading">Work Experience</h2>
@@ -250,7 +256,11 @@
   </section>
 
 
-  <!-- Skills Section -->
+  <!-- Skills Section
+     Purpose: Display technical proficiency levels with visual indicators
+     Structure:
+     - Progress bars for skill visualization
+     - Consistent layout with skill name, bar, and level indicator -->
   <section id="skills" class="skills-container">
     <!-- Technical skills content -->
     <h2 class="heading">Technical Skills</h2>
@@ -313,9 +323,14 @@
         </div>        
     </div>
   </section>
-  
 
-<!-- Certifications Section -->
+
+<!-- Certifications Section
+     Purpose: Display professional certifications and credentials
+     Structure:
+     - Container with issuer logos
+     - List of certifications with details and download links
+     - Consistent card layout for each certification -->
 <section id="certifications" class="certifications-container">
   <h2 class="heading">Certifications</h2>
   <div class="certifications-box">
@@ -327,17 +342,6 @@
       
       <!-- Certifications List -->
       <div class="certifications-list">
-          <div class="certification-item">
-              <div class="certification-details">
-                  <h3>Foundations of User Experience (UX) Design</h3>
-                  <p>An online non-credit course authorized by Google and offered through Coursera</p>
-              </div>
-              <div class="certification-actions">
-                  <span class="date">Issued Nov 2024</span>
-                  <a href="Assets/IMG/Coursera_certification_UX.png" target="_blank" download class="credential-link">See Credential</a>
-              </div>
-          </div>
-          <div class="divider"></div> <!-- Divider -->
 
           <div class="certification-item">
               <div class="certification-details">
@@ -361,6 +365,18 @@
                   <a href="Assets/IMG/Coursera_certification_HiFi.png" target="_blank" download class="credential-link">See Credential</a>
               </div>
           </div>
+          <div class="divider"></div> <!-- Divider -->
+
+          <div class="certification-item">
+              <div class="certification-details">
+                  <h3>Foundations of User Experience (UX) Design</h3>
+                  <p>An online non-credit course authorized by Google and offered through Coursera</p>
+              </div>
+              <div class="certification-actions">
+                  <span class="date">Issued Sep 2023</span>
+                  <a href="Assets/IMG/Coursera_certification_UX.png" target="_blank" download class="credential-link">See Credential</a>
+              </div>
+          </div>  
       </div>
   </div>
 </section>
@@ -368,9 +384,13 @@
 
 
 
-  
 
-  <!-- Portfolio Section -->
+  <!-- Portfolio Section
+     Purpose: Showcase projects and work samples
+     Structure:
+     - Grid layout for portfolio items
+     - Card-based design for each project
+     - Consistent thumbnail and content organization -->
   <section id="portfolio" class="portfolio-container">
     <!-- Portfolio content -->
     <h2 class="heading">Portfolio</h2>
@@ -396,7 +416,7 @@
         </div>
         <div class="portfolio-content">
           <h3>MTL Quest Portfolio</h3>
-          <p>Designing a gamefi-app for Montreal new comers through user-centered design .</p>
+          <p>Designing an GameFi app prototype for Montreal newcomers through user-centered design principles.</p>
           <span class="date">April 2024</span>
           <a href="Assets/Files/UCD_Project_Montreal.pdf" target="_blank" class="download-btn" download>Download PDF</a>
         </div>
@@ -404,7 +424,11 @@
     </div>
   </section>
   
-   <!-- Contact Section -->
+  <!-- Contact Section
+     Purpose: Provide contact information and social media links
+     Structure:
+     - Section header with call to action
+     - Email display with copy functionality -->
   <section id="contact" class="contact-container">
     <!-- Contact content -->
     <h2 class="heading">Let's Connect</h2>
@@ -424,8 +448,9 @@
         <button id="copy-btn" class="clipboard-btn">Copy</button>
       </div>
     </div>
-
   </section>
+
+
 
   <!-- copy the email / javascript generated by ChatGPT -->
   <script>

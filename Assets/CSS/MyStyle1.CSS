@@ -1,3 +1,6 @@
+/* Global Styles */
+/* These styles apply universally to ensure consistency across the site. */
+
 * {
     box-sizing: border-box; /* Ensures that padding and border are included in an element's total width and height */
 }
@@ -23,6 +26,7 @@ section {
 
 
 /* Header */
+/* Styles for the website's navigation bar and branding */
 .header{ 
     background-color: rgb(213, 223, 180);
     position: fixed;
@@ -43,6 +47,7 @@ section {
     gap: 10px;
 }
 
+/* Mobile hamburger menu button */
 .hamburger {
     display: none; 
     font-size: 36px;
@@ -74,7 +79,7 @@ section {
     }
 }
 
-
+/* Links inside the navigation bar */
 .header a{
     color: #333; 
     text-decoration: none; 
@@ -83,6 +88,7 @@ section {
     font-family: "Lora", serif;
 }
 
+/* Logo styling */
 .logo{
     font-size: 40px;
     color: rgb(216, 163, 115);
@@ -113,6 +119,7 @@ section {
     transform: scale(1.1);
 }
 
+/* Highlighted "Contact Me" button in the navbar */
 .contact-link{
     display: inline-block;
     padding: 10px 15px; 
@@ -127,6 +134,8 @@ section {
     transition: 0.3s ease; 
 }
 
+/* Home Section */
+/* This section introduces viewers and includes my profile image */
 .home-container{
     width: 100%;
     min-height: 100vh;
@@ -145,14 +154,15 @@ section {
     color: rgb(63, 66, 56);
 }
 
-.home-content h3{
-    font-size: 42px;
-    color: rgb(63, 66, 56);
-}
-
+/* Heading and text sizes */
 .home-content h1{
     font-size: 52px;
     line-height: 1.2;
+    color: rgb(63, 66, 56);
+}
+
+.home-content h3{
+    font-size: 42px;
     color: rgb(63, 66, 56);
 }
 
@@ -162,6 +172,7 @@ section {
     color: rgb(63, 66, 56);
 }
 
+/* Profile image styling */
 .img-box {
     flex: 1;
     display: flex;
@@ -198,7 +209,8 @@ section {
 }
 
 
-
+/* About Section */
+/* Contains personal information, languages, interests, education, and school club */
 .about-container{
     width: 100%;
     font-family: "Lora", serif;
@@ -224,17 +236,16 @@ section {
     max-width: 800px;
     margin: 10px 0 10px;
     color: rgb(63, 66, 56);
+    margin: 10px 0 25px;
 }
 
 
-
-
+/* Language */
 .language-container {
     width: 100%;
     margin-bottom: 50px;
     overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
 }
-
 
 .language-grid {
     display: grid;   
@@ -283,9 +294,7 @@ section {
 }
 
 
-
-
-
+/* Interests */
 .interests-container {
     flex: 1; 
     min-width: 0px;
@@ -318,14 +327,15 @@ section {
 }
   
 .interest-text p {
-    font-size: 16px;
+    font-size: 18px;
     color: rgb(107, 112, 92);
 }
   
 .interest-text a {
+    font-size: 20px;
     color: rgb(63, 66, 56);
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
   
 .interest-text a:hover {
@@ -333,7 +343,7 @@ section {
     text-decoration: underline;
 }
   
-  /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .interest-box {
       flex-direction: column;
@@ -352,7 +362,7 @@ section {
     gap: 15px;
 }
 
-
+/* education and school club */
 .education-schoolclub-container {
     display: flex; 
     flex-wrap: nowrap; 
@@ -362,6 +372,7 @@ section {
     padding: 50px 12% 30px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .education-schoolclub-container {
         flex-direction: column; 
@@ -383,15 +394,8 @@ section {
     width: 100%;
 }
 
-  
-.education-content h2,
-.school-club-content h2 {
-    font-size: 24px;
-    margin-bottom: 25px;
-    color: rgb(63, 66, 56);
-}
-
-  
+/* Timeline Items */
+/* Displays events in a vertical timeline format */
 .timeline-item {
     display: flex;
     align-items: flex-start;
@@ -419,25 +423,26 @@ section {
 
 .timeline-content h3 {
     font-size: 20px;
-    margin: 5px;
-    color: rgb(63, 66, 56);;
+    color: rgb(63, 66, 56);
+    margin: 10px 0 10px;
 }
   
 .timeline-content p {
     font-size: 18px;
-    margin: 5px;
     color: rgb(63, 66, 56);;
+    margin: 5px 0 5px;
 }
 
 .date {
     font-size: 16px;
     color: rgb(107, 112, 92);
     text-align: right;
-    margin: 5px;
+   
 }
 
 
-
+/* Experience Section */
+/* Displays the work history with logos, job titles, and descriptions */
 .experience-container {
     width: 100%;
     background-color: rgb(255, 252, 232);
@@ -445,10 +450,7 @@ section {
     font-family: "Lora", serif;
 }
 
-.experience-container h2{
-    margin-bottom: 25px;
-    text-align: center;
-}
+
 
 .experience-card {
     display: flex;
@@ -532,13 +534,14 @@ section {
 }
 
 
+/* Skills Section */
+/* Highlights technical skills with progress bars */
 .skills-container {
     width: 100%;
     padding: 50px 12%;
     font-family: "Lora", serif;
     background-color: rgb(243, 245, 229); 
 }
-
 
 
 .skills-container p {
@@ -578,7 +581,7 @@ section {
 
 .skill-bar .progress {
     height: 100%;
-    background-color: rgba(79, 147, 71, 0.746);
+    background-color: rgba(37, 77, 32, 0.675);
     border-radius: 4px;
     transition: width 0.5s ease-in-out;
 }
@@ -591,6 +594,7 @@ section {
     color: rgb(63, 66, 56); 
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .skill {
         flex-direction: column; 
@@ -610,7 +614,8 @@ section {
     }
 }
 
-
+/* Certifications Section */
+/* Displays professional certifications with issuer logos and details */
 .certifications-container {
     width: 100%;
     padding: 50px 12%;
@@ -619,11 +624,6 @@ section {
     color: rgb(63, 66, 56);
 }
 
-.certifications-container h2 {
-    font-size: 24px;
-    margin-bottom: 25px;
-   
-}
 
 .certifications-box {
     display: flex;
@@ -634,6 +634,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Certifications logo */
 .issuer-logo {
     display: flex;
     flex-wrap: wrap; 
@@ -648,6 +649,7 @@ section {
     height: auto;
 }
 
+/* Certifications content */
 .certifications-list {
     display: flex;
     flex-direction: column;
@@ -678,6 +680,7 @@ section {
     margin: 10px;
 }
 
+
 .certification-actions {
     display: flex;
     flex-direction: column;
@@ -694,7 +697,7 @@ section {
 .credential-link {
     display: inline-block;
     padding: 8px 12px;
-    background-color: rgba(125, 94, 65, 0.693);
+    background-color: rgba(92, 69, 48, 0.809);
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -717,7 +720,8 @@ section {
 
   
 
-  /* Portfolio Section */
+/* Portfolio Section */
+/* Displays portfolio projects in a grid format with thumbnails and descriptions */
 .portfolio-container {
     width: 100%;
     padding: 50px 12%;
@@ -725,9 +729,6 @@ section {
     font-family: "Lora", serif;
 }
   
-.portfolio-container h2 {
-    margin-bottom: 25px;
-}
   
 .portfolio-grid {
     display: grid;
@@ -735,7 +736,7 @@ section {
     gap: 30px;
 }
   
-  /* Portfolio Item */
+/* Portfolio Item */
 .portfolio-item {
     background: #fff;
     border-radius: 8px;
@@ -748,7 +749,7 @@ section {
     transform: scale(1.05);
   }
   
-  /* Thumbnail */
+/* Portfolio Thumbnail */
 .portfolio-thumbnail {
     position: relative;
     width: 100%;
@@ -763,7 +764,7 @@ section {
 }
   
   
-  /* Content */
+/* Portfolio Content */
 .portfolio-content {
     padding: 15px;
 }
@@ -781,8 +782,6 @@ section {
 }
   
 .portfolio-content .date {
-    font-size: 16px;
-    color: rgb(42, 78, 38, 0.561);
     margin-bottom: 15px;
     display: block;
 }
@@ -790,7 +789,7 @@ section {
 .download-btn {
     display: inline-block;
     padding: 8px 12px;
-    background-color: rgb(125, 94, 65, 0.693);
+    background-color: rgb(92, 69, 48, 0.809);
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -804,13 +803,14 @@ section {
 }
   
 
-  /* Contact Section */
+/* Contact Section */
+/* Provides contact information and social media links */
 .contact-container {
     width: 100%;
     padding: 50px 12%;
     text-align: center;
     font-family: "Lora", serif;
-    background-color: rgba(42, 78, 38, 0.561); 
+    background-color: rgba(37, 77, 32, 0.675); 
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -828,9 +828,22 @@ section {
     margin-bottom: 20px;
     color: rgb(2255, 255, 255);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-content {
+      text-align: left; 
+    }
+  
+    .portfolio-content .date {
+      text-align: left; 
+      display: block; 
+      margin-top: 10px; /* Adds spacing if necessary */
+    }
+  }
   
   
-  /* Social Links */
+/* Social Links */
 .social-links {
     margin-top: 10px;
     display: flex;
@@ -849,7 +862,7 @@ section {
 }
   
 
-  /* Email Box */
+/* Email Box */
 .email-container {
     margin: 20px auto;
     text-align: center;
@@ -870,9 +883,10 @@ section {
     border-radius: 15px;
     background-color: #fff;
 }
-  
+
+/* Copy Button */
 .clipboard-btn {
-    background-color: rgba(125, 94, 65, 0.693);
+    background-color: rgba(92, 69, 48, 0.809);
     font-family: "Lora", serif;
     color: #fff;
     border: none;
