@@ -30,16 +30,15 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* High z-index ensures the header stays above other content. */
-
 }
 
 .navbar {
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; 
     gap: 10px;
 }
 
 .hamburger {
-    display: none; /* Hide by default */
+    display: none; 
     font-size: 36px;
     background: none;
     border: none;
@@ -49,23 +48,23 @@ section {
 
 @media (max-width: 768px) {
     .navbar {
-        display: none; /* Hide navigation links by default */
-        flex-direction: column; /* Stack links vertically */
+        display: none; 
+        flex-direction: column;
         position: absolute;
         top: 100%;
         right: 0;
-        background: rgb(243, 245, 229); /* Background for the dropdown */
+        background: rgb(243, 245, 229);
         width: 100%;
         padding: 10px;
         z-index: 1000;
     }
 
     .navbar.active {
-        display: flex; /* Show menu when active */
+        display: flex; 
     }
 
     .hamburger {
-        display: block; /* Show hamburger button on smaller screens */
+        display: block; 
     }
 }
 
@@ -110,16 +109,16 @@ section {
 
 .contact-link{
     display: inline-block;
-    padding: 10px 15px; /* Add appropriate padding */
-    background-color: rgb(254, 250, 224); /* Maintain the button's color */
+    padding: 10px 15px; 
+    background-color: rgb(254, 250, 224); 
     border: 2px solid transparent;
     border-radius: 8px;
-    color: rgb(63, 66, 56); /* Consistent font color */
+    color: rgb(63, 66, 56); 
     font-size: 18px;
-    text-align: center; /* Center align text */
+    text-align: center; 
     font-weight: bold;
-    margin: 10px 0; /* Add spacing between the links */
-    transition: 0.3s ease; /* Smooth hover effect */
+    margin: 10px 0; 
+    transition: 0.3s ease; 
 }
 
 .home-container{
@@ -127,13 +126,15 @@ section {
     min-height: 100vh;
     background-color: rgba(255, 252, 232);
     display: flex;
+    flex-wrap: wrap; 
     align-items: center;
-    gap: 7em;
+    gap: 2em;
     padding: 30px 12% 0;
     font-family: "Lora", serif;
 }
 
 .home-content{
+    flex: 1;
     max-width: 800px;
     color: rgb(63, 66, 56);
 }
@@ -155,14 +156,42 @@ section {
     color: rgb(63, 66, 56);
 }
 
+.img-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .img-box img{
     border-radius: 30%;
-    width: 100%; /* Change to a percentage or fixed value */
-    max-width: 900px; /* Limit the maximum width of the image */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure it doesn't overflow */
-    margin: 0 auto; /* Center the image horizontally */
+    width: 80%; 
+    max-width: 800px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
 }
+
+
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column-reverse;/
+        text-align: center; 
+    }
+
+    .img-box {
+        margin-bottom: 20px;
+    }
+
+    .home-content {
+        text-align: center; 
+    }
+}
+
+
 
 .about-container{
     width: 100%;
@@ -235,34 +264,23 @@ section {
     font-weight: bold;
 }
 
-/* Responsive design adjustments */
+/* Responsive design */
 @media (max-width: 768px) {
     .language-grid {
-        grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .language-levels table {
         width: 100%;
-        font-size: 14px; /* Reduce font size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .language-levels table {
-        display: block; /* Enable horizontal scrolling */
-        width: 100%;
-        white-space: nowrap;
-    }
-
-    .language-levels th,
-    .language-levels td {
-        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 14px; 
     }
 }
 
 
 
- .interests-container {
+
+
+.interests-container {
     flex: 1; 
     min-width: 0px;
 }
@@ -278,39 +296,39 @@ section {
     gap: 20px;
   }
   
-  /* Thumbnail Image */
-  .interest-thumbnail img {
+ 
+.interest-thumbnail img {
     width: 80px;
     height: 80px;
     border-radius: 8px;
     object-fit: cover;
-  }
+}
   
-  /* Interest Text */
-  .interest-text h3 {
+  
+.interest-text h3 {
     font-size: 20px;
     color: rgb(63, 66, 56);
     margin-bottom: 10px;
-  }
+}
   
-  .interest-text p {
+.interest-text p {
     font-size: 16px;
     color: rgb(107, 112, 92);
-  }
+}
   
-  .interest-text a {
+.interest-text a {
     color: rgb(63, 66, 56);
     font-weight: bold;
     text-decoration: none;
-  }
+}
   
-  .interest-text a:hover {
+.interest-text a:hover {
     color: rgb(108, 175, 110);
     text-decoration: underline;
-  }
+}
   
   /* Responsive Design */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .interest-box {
       flex-direction: column;
       text-align: center;
@@ -322,28 +340,39 @@ section {
   }
 
 .interests-content {
-    margin: 0; /* Reset any margins */
+    margin: 0;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 15px; /* Add consistent space between items */
-  
+    flex-direction: column; 
+    gap: 15px;
 }
-
-
-
 
 
 .education-schoolclub-container {
     display: flex; 
     flex-wrap: nowrap; 
     background-color: rgb(243, 245, 229);
-    gap: 0px; 
+    gap: 20px; 
     justify-content: space-between; 
     padding: 50px 12% 30px;
+}
+
+@media (max-width: 768px) {
+    .education-schoolclub-container {
+        flex-direction: column; 
+        gap: 30px; /* Increases space between stacked sections */
+        align-items: center; 
+    }
+
+    .education-content,
+    .school-club-content {
+        width: 100%;
+        text-align: center;
+    }
 }
   
 .education-content,
 .school-club-content {  
+    flex: 1;
     min-width: 0; 
     width: 100%;
 }
@@ -397,7 +426,6 @@ section {
 .date {
     font-size: 16px;
     color: rgb(107, 112, 92);
-    
     text-align: right;
     margin: 5px;
 }
@@ -413,12 +441,14 @@ section {
 
 .experience-container h2{
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .experience-card {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between; /* Adds maximum horizontal space between the elements */
+    justify-content: space-between; 
     background-color: rgb(255, 255, 255);
     gap: 24px;
     padding: 20px;
@@ -428,10 +458,10 @@ section {
 }
 
 .company_logo {
-    flex-shrink: 0;  /* Prevent logo from shrinking */
-    width: 80px;  /* Fixed width */
-    height: 80px;  /* Fixed height */
-    display: flex;  /* Added for better image centering */
+    flex-shrink: 0; 
+    width: 80px;  
+    height: 80px;  
+    display: flex; 
     align-items: center;
     justify-content: center; 
 }
@@ -453,14 +483,14 @@ section {
 .company_content h3 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin: 10px;
     color: rgb(63, 66, 56);
 }
 
 .company_content p {
     font-size: 16px;
     color: rgb(107, 112, 92);
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .company_content ul {
@@ -470,7 +500,30 @@ section {
     padding-inline-start: 30px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-card {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 15px; 
+    }
 
+    .company_logo {
+        width: 60px; 
+        height: 60px;
+    }
+
+    .company_content {
+        padding-right: 0; 
+        text-align: left; 
+    }
+
+    .date {
+        text-align: center; 
+        margin-top: 10px;
+    }
+}
 
 
 .skills-container {
@@ -491,7 +544,7 @@ section {
 /* Arranges skill items in a two-column grid for clarity and organization */
 .skills-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns, where each column takes up an equal share of the available space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates 2 columns, where each column takes up an equal share of the available space */
     gap: 50px;
 }
 
@@ -529,8 +582,29 @@ section {
     text-align: left;
     font-size: 16px;
     font-weight: bold;
-    color: rgb(63, 66, 56); /* Text color */
+    color: rgb(63, 66, 56); 
 }
+
+@media (max-width: 768px) {
+    .skill {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px;
+    }
+
+   
+
+    .skill-bar {
+        width: 100%; 
+        height: 8px; 
+    }
+
+    .percentage {
+        text-align: left; 
+        font-size: 14px; 
+    }
+}
+
 
 .certifications-container {
     width: 100%;
@@ -548,7 +622,6 @@ section {
 .certifications-box {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     background: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -558,7 +631,7 @@ section {
 .issuer-logo {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Add space between logos */
+    gap: 20px; 
     margin-bottom: 20px;
 }
 
@@ -570,7 +643,6 @@ section {
 .certifications-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .certification-item {
@@ -589,14 +661,14 @@ section {
 
 .certification-item h3 {
     font-size: 20px;
-    color: rgb(63, 66, 56);
-    margin-bottom: 5px;
+    color: rgb(107, 112, 92);
+    margin: 10px;
 }
 
 .certification-item p {
     font-size: 16px;
     color: rgb(107, 112, 92);
-    margin-bottom: 5px;
+    margin: 10px;
 }
 
 .certification-actions {
@@ -608,14 +680,14 @@ section {
 
 .certification-actions .date {
     font-size: 14px;
-    color: rgb(150, 150, 150);
+    color: rgb(107, 112, 92);
     margin-bottom: 5px;
 }
 
 .credential-link {
     display: inline-block;
     padding: 8px 12px;
-    background-color: rgba(79, 147, 71, 0.746);
+    background-color: rgba(125, 94, 65, 0.693);
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -632,8 +704,8 @@ section {
 .divider {
     width: 100%;
     height: 1px;
-    background-color: rgb(200, 200, 200); /* Light gray color for the line */
-    margin: 20px 0; /* Space around the divider */
+    background-color: rgb(200, 200, 200); 
+    margin: 20px 0; 
 }
 
   
@@ -734,8 +806,8 @@ section {
     background-color: rgba(42, 78, 38, 0.561); 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the content horizontally */
-    justify-content: center; /* Centers the content vertically */
+    align-items: center; 
+    justify-content: center; 
 }
   
 .contact-container h2 {
